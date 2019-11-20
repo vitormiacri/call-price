@@ -61,7 +61,7 @@ describe('Main component', () => {
           date: format(new Date(), 'dd/MM/yyyy HH:mm'),
           source: '11',
           destiny: '17',
-          plan: { id: '30', name: 'FaleMais 30' },
+          plan: { id: '1', minutes: '30', name: 'FaleMais 30' },
           minutes: 68,
         },
       ])

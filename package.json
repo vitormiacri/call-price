@@ -9,7 +9,6 @@
   "dependencies": {
     "date-fns": "^2.7.0",
     "formik": "^2.0.4",
-    "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-currency-format": "^1.0.0",
@@ -77,6 +76,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "jest-localstorage-mock": "^2.4.0",
     "prettier": "^1.19.1",
     "react-app-rewired": "^2.1.5"
   }

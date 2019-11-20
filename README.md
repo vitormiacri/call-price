@@ -16,11 +16,22 @@ Página desenvolvida em ReactJs para simular o valor de uma ligação para deter
 | 017    | 011     | 145     | FaleMais 120 | R\$391,50       | R\$74,25        |
 | 018    | 011     | 15      | FaleMais 30  | R\$28,50        | R\$0,00         |
 
+## Principais bibliotecas utilizadas
+
+- [Formik](https://jaredpalmer.com/formik/docs/overview)
+- [Styled Components](https://www.styled-components.com/)
+- [Date-Fns](https://date-fns.org/)
+- [Yup](https://github.com/jquense/yup)
+- [React Toastfy](https://www.npmjs.com/package/react-toastify)
+- [React Icons](https://react-icons.netlify.com/#/)
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Jest](https://jestjs.io/)
+
 ## Instalação/Execução
 
 ### Versão Online
 
-- Para visualizar a versão online do projeto hospedada no [Heroku](https://heroku.com), acesse: [Callprice](https://callprice.herokuapp.com/)
+- Para visualizar a versão online do projeto hospedada no **_Heroku_**, acesse: [Callprice](https://callprice.herokuapp.com/)
 
 ### Servidor local
 
@@ -44,7 +55,7 @@ yarn start
 ## Planos e valores
 
 Foi criado um arquivo chamado **database.json** dentro do diretório **_src_**, que armazena as informações de valores para cada tipo de ligação e também de planos existentes.
-Caso seja necessário alterar ou adicionar novas informações de valores e planos, basta editar este arquivo.
+Caso seja necessário alterar ou adicionar novas informações de valores e planos, basta editar este arquivo, seguindo o padrão das informações já existentes no arquivo.
 
 ## Testes
 

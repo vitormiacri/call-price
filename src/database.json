@@ -33,15 +33,18 @@
   ],
   "plans": [
     {
-      "id": "30",
+      "id": "1",
+      "minutes": "30",
       "name": "FaleMais 30"
     },
     {
-      "id": "60",
+      "id": "2",
+      "minutes": "60",
       "name": "FaleMais 60"
     },
     {
-      "id": "120",
+      "id": "3",
+      "minutes": "120",
       "name": "FaleMais 120"
     }
   ]

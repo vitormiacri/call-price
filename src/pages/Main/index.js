@@ -76,7 +76,7 @@ export default function Main() {
           date: format(new Date(), 'dd/MM/yyyy HH:mm'),
           source,
           destiny,
-          plan: database.plans.find(item => item.id === plan),
+          plan: database.plans.find(item => item.minutes === plan),
           minutes,
         },
         ...historicSearch,

@@ -75,7 +75,9 @@ export default function Form({
             onChange={handleChange}
           >
             {database.plans.map(item => (
-              <option value={item.id}>{item.name}</option>
+              <option key={item.id} value={item.minutes}>
+                {item.name}
+              </option>
             ))}
           </Dropdown>
         </FormControl>
