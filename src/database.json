@@ -1,0 +1,48 @@
+{
+  "tax": [
+    {
+      "source": "11",
+      "destiny": "16",
+      "value": 1.9
+    },
+    {
+      "source": "11",
+      "destiny": "17",
+      "value": 1.7
+    },
+    {
+      "source": "11",
+      "destiny": "18",
+      "value": 0.9
+    },
+    {
+      "source": "16",
+      "destiny": "11",
+      "value": 2.9
+    },
+    {
+      "source": "17",
+      "destiny": "11",
+      "value": 2.7
+    },
+    {
+      "source": "18",
+      "destiny": "11",
+      "value": 1.9
+    }
+  ],
+  "plans": [
+    {
+      "id": "30",
+      "name": "FaleMais 30"
+    },
+    {
+      "id": "60",
+      "name": "FaleMais 60"
+    },
+    {
+      "id": "120",
+      "name": "FaleMais 120"
+    }
+  ]
+}
