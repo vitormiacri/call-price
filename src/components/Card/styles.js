@@ -14,7 +14,7 @@ export const Container = styled.div`
   &:last-of-type {
     margin-bottom: 0;
 
-    @media (min-width: 1025px) {
+    @media (min-width: 769px) {
       flex-shrink: 2;
     }
   }
@@ -22,7 +22,7 @@ export const Container = styled.div`
   &:first-of-type {
     margin-bottom: 1rem;
 
-    @media (min-width: 1025px) {
+    @media (min-width: 769px) {
       flex-shrink: 4;
       margin-right: 1rem;
       max-height: 600px;

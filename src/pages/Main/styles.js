@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 1100px;
 
-  @media (min-width: 1025px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
   }
@@ -17,7 +17,7 @@ export const Title = styled.h2`
   font-size: 1.2rem;
   margin: 1rem 0;
   text-align: center;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     font-size: 2rem;
   }
 `;
@@ -35,14 +35,8 @@ export const FormContainer = styled.div`
     align-items: center;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       max-width: 270px;
-
-      select,
-      input,
-      button {
-        margin-right: 1rem;
-      }
     }
   }
 

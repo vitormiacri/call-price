@@ -4,6 +4,8 @@ import { FormContainer, FormControl, Button } from './styles';
 import Input from '~/components/Input';
 import Dropdown from '~/components/Dropdown';
 
+const database = require('../../database.json');
+
 export default function Form({
   values: { source, destiny, minutes, plan },
   handleSubmit,
@@ -72,9 +74,9 @@ export default function Form({
             value={plan}
             onChange={handleChange}
           >
-            <option value="30">FaleMais 30</option>
-            <option value="60">FaleMais 60</option>
-            <option value="120">FaleMais 120</option>
+            {database.plans.map(item => (
+              <option value={item.id}>{item.name}</option>
+            ))}
           </Dropdown>
         </FormControl>
         <Button type="submit">CALCULAR</Button>

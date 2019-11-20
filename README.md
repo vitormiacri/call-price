@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Quanto vou pagar?
 
-## Available Scripts
+Página desenvolvida em ReactJs para simular o valor de uma ligação para determinados DDDs, respeitando as seguintes regras:
 
-In the project directory, you can run:
+1. O DDD 11 pode realizar chamada para todos, exceto pra ele mesmo;
+2. Todos os outros DDDs podem realizar chamada para o 11;
+3. Todos os campos são obrigatórios;
 
-### `yarn start`
+### Exemplos de simulações
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Origem | Destino | Minutos | Plano        | Valor Sem Plano | Valor Com Plano |
+| ------ | ------- | ------- | ------------ | --------------- | --------------- |
+| 011    | 016     | 53      | FaleMais 30  | R\$100,70       | R\$48,07        |
+| 011    | 017     | 99      | FaleMais 60  | R\$168,30       | R\$72,93        |
+| 018    | 016     | 25      | FaleMais 60  | -               | -               |
+| 017    | 011     | 145     | FaleMais 120 | R\$391,50       | R\$74,25        |
+| 018    | 011     | 15      | FaleMais 30  | R\$28,50        | R\$0,00         |
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Instalação/Execução
 
-### `yarn test`
+### Versão Online
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Para visualizar a versão online do projeto hospedada no [Heroku](https://heroku.com), acesse: [Callprice](https://callprice.herokuapp.com/)
 
-### `yarn build`
+### Servidor local
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Acesse a pasta onde foi descompactado o projeto
+- Execute o comando abaixo para instalar as dependências:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+npm install
+or
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Agora é só rodar o comando:
 
-### `yarn eject`
+```
+npm run start
+or
+yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Planos e valores
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Foi criado um arquivo chamado **database.json** dentro do diretório **_src_**, que armazena as informações de valores para cada tipo de ligação e também de planos existentes.
+Caso seja necessário alterar ou adicionar novas informações de valores e planos, basta editar este arquivo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Testes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Para executar os testes, acesse a pasta do projeto e execute o seguinte comando:
 
-## Learn More
+```
+npm run test
+or
+yarn test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Após rodar os testes, é gerado um relatório em formato _HTML_ que pode ser encontrado na pasta:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+__tests__/coverage/lcov-report/index.html
+```
