@@ -10,6 +10,8 @@ import Card from '~/components/Card';
 import HistoricSearch from '~/components/HistoricSearch';
 import Form from './Form';
 
+import CalcValue from '../../utils/CalcValue';
+
 const database = require('../../database.json');
 
 const validation = Yup.object().shape({
@@ -52,22 +54,16 @@ export default function Main() {
   }
 
   function handleSubmit({ source, destiny, minutes, plan }) {
-    let exceeded = 0;
-    let totalValuePlan = 0.0;
-    let totalValue = 0.0;
-    let percent = 0;
-
     const searchTax = database.tax.find(
       tax => tax.source === source && tax.destiny === destiny
     );
 
     if (searchTax) {
-      if (minutes > plan) {
-        exceeded = minutes - plan;
-        percent = ((exceeded * searchTax.value) / 100) * 10;
-        totalValuePlan = exceeded * searchTax.value + percent;
-      }
-      totalValue = searchTax.value * minutes;
+      const { totalValue, totalValuePlan } = CalcValue(
+        searchTax,
+        minutes,
+        plan
+      );
 
       const result = [
         {
